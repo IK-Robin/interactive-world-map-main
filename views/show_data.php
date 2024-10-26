@@ -1,7 +1,4 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ikr_map_data_edit">
-  Launch demo modal
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="ikr_map_data_edit" tabindex="-1" aria-labelledby="ikr_map_data_editLabel" aria-hidden="true">

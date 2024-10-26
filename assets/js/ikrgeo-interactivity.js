@@ -252,8 +252,8 @@ function populateTable(data) {
           <td style="background-color: ${item.fill_color};">${item.fill_color}</td>
           <td style="background-color: ${item.click_color};">${item.click_color || 'N/A'}</td>
           <td>
-              <button class="edit-btn btn btn-sm btn-primary"  data-bs-toggle="modal" data-bs-target="#ikr_map_data_edit"  data-id="${item.map_id}">Edit</button>
-              <button class="delete-btn btn btn-sm btn-danger" data-id="${item.map_id}">Delete</button>
+              <button class="edit-btn btn btn-sm btn-primary"  data-bs-toggle="modal" data-bs-target="#ikr_map_data_edit"  data-id="${item.map_id}" data-edit ="ikr_data_edit">Edit</button>
+              <button class="delete-btn btn btn-sm btn-danger" data-delete ="ikr_data_delete" data-id="${item.map_id}">Delete</button>
           </td>
       `;
       
@@ -291,7 +291,22 @@ function showModal(isEdit = false, data = {}) {
 
 // add modal value on click 
 // get modal input 
+populateTable(response);
+const editElements = document.querySelectorAll('[data-edit="ikr_data_edit"]');
+console.log(editElements)
+// Loop through each selected element
+editElements.forEach(edit_ele => {
+    // add a click event to get the dataset
+    edit_ele.addEventListener('click',(ev)=> {
+   
+      const id = ev.target.dataset.id;
+      // find the existing data 
+      const itemData = response.find(item => item.map_id === id);
+      
+  
+    });
 
+});
 
 
 
@@ -334,7 +349,7 @@ function showModal(isEdit = false, data = {}) {
 // });
 
 // Initial population of the table
-populateTable(response);
+
       }
     } catch (err) {
       console.log(err);

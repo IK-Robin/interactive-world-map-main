@@ -30,7 +30,7 @@
 
          </div>
      </div>
-     <button type="button" id="add-entry-btn">Add Entry</button>
+ 
      <input id="rdata_submit_form" type="submit" value="Submit" />
  </form>
  
