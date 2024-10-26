@@ -1,0 +1,27 @@
+// edit modal form 
+/*edit modal form */
+
+.ikr_color_inp{
+
+    .ikr_w_typehove {
+        position: absolute;
+        right: 13px;
+        top: 8px;
+        border: 0;
+        border-radius: 51%;
+        width: 30px;
+        height: 30px;
+        &:focus{
+            border: none;
+        }
+        &:active{
+            border: none;
+        }
+    }
+    .ikr_w_hovecolor {
+        width: 100%;
+        /* max-height: 40px; */
+        padding: 7px ;
+    }
+}
+

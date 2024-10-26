@@ -1,5 +1,3 @@
-
-
 <!-- Modal -->
 <div class="modal fade" id="ikr_map_data_edit" tabindex="-1" aria-labelledby="ikr_map_data_editLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -10,68 +8,63 @@
       </div>
 
       <div class="modal-body">
-      <form action="" id="rdata_from_edit">
+        <form action="" id="rdata_from_edit">
 
- <?php wp_nonce_field('w_map_form_edit_action', 'w_map_form_edit_nonce'); ?>
+          <?php wp_nonce_field('w_map_form_edit_action', 'w_map_form_edit_nonce'); ?>
 
-     <div id="data-entries container">
-         <div class=" row">
-          <div class="col-md-6">   <label for="id">Map ID</label>
-             <input type="text" name="id" class="scratch-data-id" id="modal_map_id" />
-             <label for="title">Title</label>
-             <input type="text" name="title" placeholder="Insert your title" id="modal_ikrTitle" />
-             <label for="des">Description</label>
-             <input type="text" name="des" id="modal_ikrdes" placeholder="Insert your description" />
-             <label for="hovecolor">Hover Color</label>
+          <div id="data-entries container">
+            <div class=" row">
+              <div class="col-md-6"> <label for="id">Map ID</label>
+                <input type="text" name="id" class="scratch-data-id" id="modal_map_id" />
+                <label for="title">Title</label>
+                <input type="text" name="title" placeholder="Insert your title" id="modal_ikrTitle" />
+                <label for="des">Description</label>
+                <input type="text" name="des" id="modal_ikrdes" placeholder="Insert your description" />
+                <label for="hovecolor">Hover Color</label>
 
-             <div class="customColorInput">
-      <input
-        type="text"
-        id="colorCodePreview"
-        name="themeIconLightBg"
-        class="customColorInput__text-input jsColorValue"
-        value="#FF7B00"
-      />
+                <div class="ikr_color_inp d-flex justify-content-center position-relative ">
+                
 
-      
-      <input
-        type="color"
-        id="colorCodeSelection"
-        class="customColorInput__select-input"
-        value="#FF7B00"
-      />
-    </div>
+                  <input type="text" name="hovecolor" id="modal_hovecolor" value="#0000FF" class="ikr_w_hovecolor" />
+                  <input type="color" id="modal_typeHovcolor"  class ="ikr_w_typehove  shadow-none " name="hovecolor" value="#0000FF" />
 
-             <input type="color" id="modal_typeHovcolor"  value="#0000FF" />
-
-             <input type="text" name="hovecolor" id="modal_hovecolor" value="#0000FF"/>
-             </div>
+                </div>
 
 
-          <div class="col-md-6">
-          <label for="fill_color">Fill Color</label>
-             <input type="color" id="modal_filltype" value="#0000FF" />
 
-             <input type="text" name="fillcolor" id="modal_fill_color" value="#0000FF" />
+              </div>
 
 
-              <label for="modal_ikr_img"> image</label>
+              <div class="col-md-6">
 
-              <input type="text"  name="modal_ikr_img" id="modal_ikr_img" placeholder=""  />
-            
-              <label for="modal_link">Website url</label>
+                <label for="fill_color">Fill Color</label>
 
-              <input type="text"  name="modal_link" id="modal_link" placeholder="http://google.com"  />
-            
-             
+              <div class="ikr_color_inp d-flex justify-content-center position-relative ">
+                
+              <input type="text" class="ikr_w_hovecolor" name="fillcolor" id="modal_fill_color" value="#0000FF" />
+
+                <input type="color" id="modal_filltype" value="#0000FF" class="ikr_w_typehove shadow-none" />
+
+              </div>
+
+
+                <label for="modal_ikr_img" class="d-block"> image</label>
+
+                <input type="text" name="modal_ikr_img" id="modal_ikr_img" placeholder="" />
+
+                <label for="modal_link">Website url</label>
+
+                <input type="text" name="modal_link" id="modal_link" placeholder="http://google.com" />
+
+
+              </div>
+
+
+
+
+
+            </div>
           </div>
-           
-             
-         
-
-
-         </div>
-     </div>
 
 
 
@@ -79,7 +72,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit " class="btn btn-primary">Save changes</button>
-        
+
 
         </form>
       </div>
@@ -90,19 +83,19 @@
 
 <!-- Table for Displaying Entries -->
 <table id="mapTable" border="1" class="table mt-4">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Map ID</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Hover Color</th>
-            <th>Fill Color</th>
-            <th>Click Color</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Rows will be populated by JavaScript -->
-    </tbody>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Map ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Hover Color</th>
+      <th>Fill Color</th>
+      <th>Click Color</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Rows will be populated by JavaScript -->
+  </tbody>
 </table>

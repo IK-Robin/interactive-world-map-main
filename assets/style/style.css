@@ -336,4 +336,26 @@ img {
 /* end details and tooltip style  */
 #changehover {
   display: none;
+}
+
+/*edit modal form */
+.ikr_color_inp .ikr_w_typehove {
+  position: absolute;
+  right: 13px;
+  top: 8px;
+  border: 0;
+  border-radius: 51%;
+  width: 30px;
+  height: 30px;
+}
+.ikr_color_inp .ikr_w_typehove:focus {
+  border: none;
+}
+.ikr_color_inp .ikr_w_typehove:active {
+  border: none;
+}
+.ikr_color_inp .ikr_w_hovecolor {
+  width: 100%;
+  /* max-height: 40px; */
+  padding: 7px;
 }/*# sourceMappingURL=style.css.map */
