@@ -14,9 +14,9 @@
 
  <?php wp_nonce_field('w_map_form_edit_action', 'w_map_form_edit_nonce'); ?>
 
-     <div id="data-entries">
-         <div class="data-entry">
-             <label for="id">Map ID</label>
+     <div id="data-entries container">
+         <div class=" row">
+          <div class="col-md-6">   <label for="id">Map ID</label>
              <input type="text" name="id" class="scratch-data-id" id="modal_map_id" />
              <label for="title">Title</label>
              <input type="text" name="title" placeholder="Insert your title" id="modal_ikrTitle" />
@@ -26,13 +26,27 @@
              <input type="color" id="modal_typeHovcolor"  value="#0000FF" />
 
              <input type="text" name="hovecolor" id="modal_hovecolor" value="#0000FF"/>
-             
-             <label for="fill_color">Fill Color</label>
+             </div>
+
+
+          <div class="col-md-6">
+          <label for="fill_color">Fill Color</label>
              <input type="color" id="modal_filltype" value="#0000FF" />
 
              <input type="text" name="fillcolor" id="modal_fill_color" value="#0000FF" />
-             
+
+
+              <label for="modal_ikr_img"> image</label>
+
+              <input type="text"  name="modal_ikr_img" id="modal_ikr_img" placeholder=""  />
             
+              <label for="modal_link">Website url</label>
+
+              <input type="text"  name="modal_link" id="modal_link" placeholder="http://google.com"  />
+            
+             
+          </div>
+           
              
          
 
