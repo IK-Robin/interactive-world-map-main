@@ -10,9 +10,9 @@
       </div>
 
       <div class="modal-body">
-      <form action="" id="rdata_from">
+      <form action="" id="rdata_from_edit">
 
- <?php wp_nonce_field('w_map_form_action', 'w_map_form_nonce'); ?>
+ <?php wp_nonce_field('w_map_form_edit_action', 'w_map_form_edit_nonce'); ?>
 
      <div id="data-entries">
          <div class="data-entry">

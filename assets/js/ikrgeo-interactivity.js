@@ -27,6 +27,23 @@ const filltype = document.getElementById("filltype");
 const rdata_submit_form  = document.getElementById('rdata_submit_form');
 
 
+
+// select all edit form input 
+const rdata_from_edit = document.getElementById('rdata_from_edit');
+
+const modal_map_id = document.getElementById('modal_map_id');
+const modal_ikrTitle = document.getElementById('modal_ikrTitle');
+
+const modal_ikrdes = document.getElementById('modal_ikrdes');
+
+const modal_typeHovcolor = document.getElementById('modal_typeHovcolor');
+const modal_hovecolor = document.getElementById('modal_hovecolor');
+
+
+const modal_filltype = document.getElementById('modal_filltype');
+const modal_fill_color = document.getElementById('modal_fill_color');
+
+
 //  get data on load
 
 let tab = [];
@@ -275,6 +292,8 @@ function showModal(isEdit = false, data = {}) {
   $('#dataModal').modal('show');
 }
 
+
+
 // Event listener for table actions
 // document.addEventListener('click', function(event) {
 //   const target = event.target;
@@ -302,7 +321,18 @@ editElements.forEach(edit_ele => {
       const id = ev.target.dataset.id;
       // find the existing data 
       const itemData = response.find(item => item.map_id === id);
-      
+
+      modal_map_id.value =itemData.map_id;
+      modal_ikrTitle.value = itemData.title;
+      modal_ikrdes.value = itemData.map_des;
+      modal_typeHovcolor.value = itemData.hov_color;
+      modal_hovecolor.value =  itemData.hov_color;
+      modal_fill_color.value = itemData.fill_color
+      modal_filltype.value = itemData.fill_color;
+
+
+
+
   
     });
 
