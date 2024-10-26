@@ -23,6 +23,25 @@
              <label for="des">Description</label>
              <input type="text" name="des" id="modal_ikrdes" placeholder="Insert your description" />
              <label for="hovecolor">Hover Color</label>
+
+             <div class="customColorInput">
+      <input
+        type="text"
+        id="colorCodePreview"
+        name="themeIconLightBg"
+        class="customColorInput__text-input jsColorValue"
+        value="#FF7B00"
+      />
+
+      
+      <input
+        type="color"
+        id="colorCodeSelection"
+        class="customColorInput__select-input"
+        value="#FF7B00"
+      />
+    </div>
+
              <input type="color" id="modal_typeHovcolor"  value="#0000FF" />
 
              <input type="text" name="hovecolor" id="modal_hovecolor" value="#0000FF"/>
