@@ -43,6 +43,9 @@ const modal_hovecolor = document.getElementById('modal_hovecolor');
 const modal_filltype = document.getElementById('modal_filltype');
 const modal_fill_color = document.getElementById('modal_fill_color');
 
+const ikr_select_img = document.getElementById('ikr_select_img');
+const modal_link = document.getElementById('modal_link');
+
 
 //  get data on load
 

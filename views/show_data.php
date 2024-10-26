@@ -8,7 +8,7 @@
       </div>
 
       <div class="modal-body">
-        <form action="" id="rdata_from_edit">
+        <form action="" id="rdata_from_edit" class="ikr_form_style">
 
           <?php wp_nonce_field('w_map_form_edit_action', 'w_map_form_edit_nonce'); ?>
 
@@ -16,17 +16,17 @@
             <div class=" row">
               <div class="col-md-6"> <label for="id">Map ID</label>
                 <input type="text" name="id" class="scratch-data-id" id="modal_map_id" />
-                <label for="title">Title</label>
+                <label class="ikr_form_label" for="title">Title</label>
                 <input type="text" name="title" placeholder="Insert your title" id="modal_ikrTitle" />
-                <label for="des">Description</label>
+                <label class="ikr_form_label" for="des">Description</label>
                 <input type="text" name="des" id="modal_ikrdes" placeholder="Insert your description" />
-                <label for="hovecolor">Hover Color</label>
+                <label class="ikr_form_label" for="hovecolor">Hover Color</label>
 
                 <div class="ikr_color_inp d-flex justify-content-center position-relative ">
-                
+
 
                   <input type="text" name="hovecolor" id="modal_hovecolor" value="#0000FF" class="ikr_w_hovecolor" />
-                  <input type="color" id="modal_typeHovcolor"  class ="ikr_w_typehove  shadow-none " name="hovecolor" value="#0000FF" />
+                  <input type="color" id="modal_typeHovcolor" class="ikr_w_typehove  shadow-none " name="hovecolor" value="#0000FF" />
 
                 </div>
 
@@ -37,22 +37,25 @@
 
               <div class="col-md-6">
 
-                <label for="fill_color">Fill Color</label>
+                <label class="ikr_form_label" for="fill_color">Fill Color</label>
 
-              <div class="ikr_color_inp d-flex justify-content-center position-relative ">
-                
-              <input type="text" class="ikr_w_hovecolor" name="fillcolor" id="modal_fill_color" value="#0000FF" />
+                <div class="ikr_color_inp d-flex justify-content-center position-relative ">
 
-                <input type="color" id="modal_filltype" value="#0000FF" class="ikr_w_typehove shadow-none" />
+                  <input type="text" class="ikr_w_hovecolor" name="fillcolor" id="modal_fill_color" value="#0000FF" />
 
-              </div>
+                  <input type="color" id="modal_filltype" value="#0000FF" class="ikr_w_typehove shadow-none" />
+
+                </div>
 
 
-                <label for="modal_ikr_img" class="d-block"> image</label>
+                <label class="ikr_form_label" for="modal_ikr_img" class="d-block"> image</label>
 
-                <input type="text" name="modal_ikr_img" id="modal_ikr_img" placeholder="" />
+                <div class="ikr_color_inp d-flex justify-content-center position-relative ">
 
-                <label for="modal_link">Website url</label>
+                  <input type="text" name="modal_ikr_img" id="modal_ikr_img" placeholder="" />
+                  <input type="button" value="Slect Image" class="ikr_select_img btn btn-primary" id="ikr_select_img">
+                </div>
+                <label class="ikr_form_label" for="modal_link">Website url</label>
 
                 <input type="text" name="modal_link" id="modal_link" placeholder="http://google.com" />
 
