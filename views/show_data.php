@@ -17,15 +17,20 @@
               <div class="col-md-6"> <label for="id">Map ID</label>
                 <input type="text" name="id" class="scratch-data-id" id="modal_map_id" />
                 <label class="ikr_form_label" for="title">Title</label>
+                
                 <input type="text" name="title" placeholder="Insert your title" id="modal_ikrTitle" />
+
                 <label class="ikr_form_label" for="des">Description</label>
+
                 <input type="text" name="des" id="modal_ikrdes" placeholder="Insert your description" />
+
                 <label class="ikr_form_label" for="hovecolor">Hover Color</label>
 
                 <div class="ikr_color_inp d-flex justify-content-center position-relative ">
 
 
                   <input type="text" name="hovecolor" id="modal_hovecolor" value="#0000FF" class="ikr_w_hovecolor" />
+                  
                   <input type="color" id="modal_typeHovcolor" class="ikr_w_typehove  shadow-none " name="hovecolor" value="#0000FF" />
 
                 </div>

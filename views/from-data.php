@@ -12,10 +12,13 @@
             <label for="title">Title</label>
             <input type="text" name="title" placeholder="Insert your title" id="ikrTitle" />
             <label for="des">Description</label>
+            
             <input type="text" name="des" id="ikrdes" placeholder="Insert your description" />
+
             <label for="hovecolor">Hover Color</label>
 
             <div class="ikr_color_inp d-flex justify-content-center position-relative ">
+                
                 <input type="color" id="typeHovcolor" value="#0000FF" class="ikr_w_typehove shadow-none" />
 
                 <input type="text" name="hovecolor" id="hovecolor" value="#0000FF" />

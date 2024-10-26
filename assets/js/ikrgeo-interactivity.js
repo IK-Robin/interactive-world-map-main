@@ -223,6 +223,33 @@ ikrgooMap.addEventListener("load", (irkcontent) => {
     // featch_data_from_db();
   });
 
+//  edit data from list 
+  rdata_from_edit.addEventListener('submit',(edtisub )=>{
+    edtisub.preventDefault();
+     // send request to edit the data 
+     console.log('robin')
+     const modalElement = document.getElementById('ikr_map_data_edit');
+
+     // Create a Bootstrap modal instance
+     bootstrap.Modal.getInstance(document.getElementById('ikr_map_data_edit')).hide();
+
+     
+     worldmp_makeAjaxRequestGlobal(
+      rdata_from_edit,
+      your_ajax_object.edit_data,
+      (success) => {
+        if (success) {
+          console.log("Data successfully sent to the server.");
+
+          // Fetch data from the database after the data is sent successfully
+          featch_data_from_db();
+        } else {
+          console.log("Failed to send data.");
+        }
+      }
+    );
+  });
+
   // get the data asynconalsy
 
   async function featch_data_from_db() {
@@ -351,44 +378,6 @@ editElements.forEach(edit_ele => {
 
 
 
-// Save entry on form submit
-// document.getElementById('dataForm').addEventListener('submit', function(event) {
-//   event.preventDefault();
-//   const id = document.getElementById("map_id").value;
-//   const title = document.getElementById("ikrTitle").value;
-//   const description = document.getElementById("ikrdes").value;
-//   const hoverColor = document.getElementById("typeHovcolor").value;
-//   const fillColor = document.getElementById("filltype").value;
-//   const clickColor = document.getElementById("typeClickColor").value;
-
-//   if (id) {
-//       // Handle edit case
-//       const entry = mapData.find(item => item.map_id === id);
-//       if (entry) {
-//           entry.title = title;
-//           entry.map_des = description;
-//           entry.hov_color = hoverColor;
-//           entry.fill_color = fillColor;
-//           entry.click_color = clickColor;
-//       }
-//   } else {
-//       // Handle add case
-//       mapData.push({
-//           id: String(mapData.length + 1),
-//           map_id: 'wd_' + (mapData.length + 1),
-//           title,
-//           map_des: description,
-//           hov_color: hoverColor,
-//           fill_color: fillColor,
-//           click_color: clickColor
-//       });
-//   }
-
-//   $('#dataModal').modal('hide');
-//   populateTable(mapData);
-// });
-
-// Initial population of the table
 
       }
     } catch (err) {
