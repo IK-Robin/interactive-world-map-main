@@ -252,7 +252,7 @@ function populateTable(data) {
           <td style="background-color: ${item.fill_color};">${item.fill_color}</td>
           <td style="background-color: ${item.click_color};">${item.click_color || 'N/A'}</td>
           <td>
-              <button class="edit-btn btn btn-sm btn-primary" data-id="${item.map_id}">Edit</button>
+              <button class="edit-btn btn btn-sm btn-primary"  data-bs-toggle="modal" data-bs-target="#ikr_map_data_edit"  data-id="${item.map_id}">Edit</button>
               <button class="delete-btn btn btn-sm btn-danger" data-id="${item.map_id}">Delete</button>
           </td>
       `;
@@ -262,18 +262,18 @@ function populateTable(data) {
 }
 
 // // Show the modal with form data for adding or editing
-// function showModal(isEdit = false, data = {}) {
-//   document.getElementById("map_id").value = isEdit ? data.map_id : '';
-//   document.getElementById("ikrTitle").value = isEdit ? data.title : '';
-//   document.getElementById("ikrdes").value = isEdit ? data.map_des : '';
-//   document.getElementById("typeHovcolor").value = isEdit ? data.hov_color : '#0000FF';
-//   document.getElementById("filltype").value = isEdit ? data.fill_color : '#0000FF';
-//   document.getElementById("typeClickColor").value = isEdit ? data.click_color : '#0000FF';
+function showModal(isEdit = false, data = {}) {
+  document.getElementById("map_id").value = isEdit ? data.map_id : '';
+  document.getElementById("ikrTitle").value = isEdit ? data.title : '';
+  document.getElementById("ikrdes").value = isEdit ? data.map_des : '';
+  document.getElementById("typeHovcolor").value = isEdit ? data.hov_color : '#0000FF';
+  document.getElementById("filltype").value = isEdit ? data.fill_color : '#0000FF';
+  document.getElementById("typeClickColor").value = isEdit ? data.click_color : '#0000FF';
 
 
 
-//   $('#dataModal').modal('show');
-// }
+  $('#dataModal').modal('show');
+}
 
 // Event listener for table actions
 // document.addEventListener('click', function(event) {
@@ -287,6 +287,14 @@ function populateTable(data) {
 //       deleteEntry(id);
 //   }
 // });
+
+
+// add modal value on click 
+// get modal input 
+
+
+
+
 
 // Save entry on form submit
 // document.getElementById('dataForm').addEventListener('submit', function(event) {

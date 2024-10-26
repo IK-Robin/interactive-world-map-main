@@ -1,14 +1,14 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ikr_map_data_edit">
   Launch demo modal
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ikr_map_data_edit" tabindex="-1" aria-labelledby="ikr_map_data_editLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="ikr_map_data_editLabel">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -20,25 +20,22 @@
      <div id="data-entries">
          <div class="data-entry">
              <label for="id">Map ID</label>
-             <input type="text" name="id" class="scratch-data-id" id="map_id" />
+             <input type="text" name="id" class="scratch-data-id" id="modal_map_id" />
              <label for="title">Title</label>
-             <input type="text" name="title" placeholder="Insert your title" id="ikrTitle" />
+             <input type="text" name="title" placeholder="Insert your title" id="modal_ikrTitle" />
              <label for="des">Description</label>
-             <input type="text" name="des" id="ikrdes" placeholder="Insert your description" />
+             <input type="text" name="des" id="modal_ikrdes" placeholder="Insert your description" />
              <label for="hovecolor">Hover Color</label>
-             <input type="color" id="typeHovcolor"  value="#0000FF" />
+             <input type="color" id="modal_typeHovcolor"  value="#0000FF" />
 
-             <input type="text" name="hovecolor" id="hovecolor" value="#0000FF"/>
+             <input type="text" name="hovecolor" id="modal_hovecolor" value="#0000FF"/>
              
              <label for="fill_color">Fill Color</label>
-             <input type="color" id="filltype" value="#0000FF" />
+             <input type="color" id="modal_filltype" value="#0000FF" />
 
-             <input type="text" name="fillcolor" id="fill_color" value="#0000FF" />
+             <input type="text" name="fillcolor" id="modal_fill_color" value="#0000FF" />
              
-             <label for="clickColor"> click color</label>
-             <input type="color" id="typeClickColor"  value="#0000FF" />
-
-             <input type="text" value="#0000FF" name="clickcolor" id="clickColor" />
+            
              
          
 
