@@ -338,6 +338,10 @@ img {
   display: none;
 }
 
+.table {
+  border-spacing: 0 8px; /* Adds spacing only between rows */
+}
+
 /*edit modal form */
 .ikr_color_inp .ikr_w_typehove {
   position: absolute;

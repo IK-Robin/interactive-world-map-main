@@ -261,23 +261,30 @@ function populateTable(data) {
   tableBody.innerHTML = ''; // Clear existing rows
 
   data.forEach((item, ind) => {
-      const row = document.createElement('tr');
+    const row = document.createElement('tr');
+    row.classList.add('shadow', 'my-2');
+    
+    // Limit content to the first 5 words
+    const limitWords = (text, wordLimit) => {
+      const words = text.split(' ');
+      return words.length > wordLimit ? words.slice(0, wordLimit).join(' ') + '...' : text;
+    };
+    
+    row.innerHTML = `
+        <td>${ind + 1}</td>
+        <td>${item.map_id}</td>
+        <td>${limitWords(item.title, 5)}</td>
+        <td>${limitWords(item.map_des,4)}</td>
+        <td style="background-color: ${item.hov_color};">${item.hov_color}</td>
+        <td style="background-color: ${item.fill_color};">${item.fill_color}</td>
       
-      row.innerHTML = `
-          <td>${ind + 1}</td>
-          <td>${item.map_id}</td>
-          <td>${item.title}</td>
-          <td>${item.map_des}</td>
-          <td style="background-color: ${item.hov_color};">${item.hov_color}</td>
-          <td style="background-color: ${item.fill_color};">${item.fill_color}</td>
-          <td style="background-color: ${item.click_color};">${item.click_color || 'N/A'}</td>
-          <td>
-              <button class="edit-btn btn btn-sm btn-primary"  data-bs-toggle="modal" data-bs-target="#ikr_map_data_edit"  data-id="${item.map_id}" data-edit ="ikr_data_edit">Edit</button>
-              <button class="delete-btn btn btn-sm btn-danger" data-delete ="ikr_data_delete" data-id="${item.map_id}">Delete</button>
-          </td>
-      `;
-      
-      tableBody.appendChild(row);
+        <td>
+            <button class="edit-btn btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#ikr_map_data_edit" data-id="${item.map_id}" data-edit="ikr_data_edit">Edit</button>
+            <button class="delete-btn btn btn-sm btn-danger" data-delete="ikr_data_delete" data-id="${item.map_id}">Delete</button>
+        </td>
+    `;
+    
+    tableBody.appendChild(row);
   });
 }
 

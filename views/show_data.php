@@ -85,7 +85,7 @@
 
 
 <!-- Table for Displaying Entries -->
-<table id="mapTable" border="1" class="table mt-4">
+<table id="mapTable" border="1" class="table mt-4 table">
   <thead>
     <tr>
       <th>#</th>
@@ -94,7 +94,7 @@
       <th>Description</th>
       <th>Hover Color</th>
       <th>Fill Color</th>
-      <th>Click Color</th>
+      
       <th>Actions</th>
     </tr>
   </thead>
